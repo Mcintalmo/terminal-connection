@@ -4,7 +4,7 @@ const GATE_SCENE := preload("res://Scenes/Gate.tscn")
 const KIOSK_SCENE := preload("res://Scenes/Kiosk.tscn")
 
 export(float) var hub_side_chance := 0.5
-export(float) var terminal_generation_chance := 0.5
+export(float) var terminal_generation_chance := 1
 export(float) var terminal_spacing := 4
 export(float) var concourse_generation_chance := 0.5
 export(float) var concourse_spacing := 2
@@ -21,6 +21,16 @@ var gates := []
 
 
 
+func _ready() -> void:
+	randomize()
+	clear()
+	var hub_rect := generate_hub()
+	var term_rects := generate_terminals(hub_rect)
+	_build_rect(hub_rect)
+	for term in term_rects:
+		_build_rect(term, 1)
+
+
 func get_num_gates() -> int:
 	return gates.size()
 
@@ -33,7 +43,7 @@ func randomize_kiosks() -> void:
 	pass # TODO
 
 
-func build_walls() -> void:
+func _build_walls() -> void:
 	for cell in get_used_cells_by_id(Tile.Floor):
 		for x in range(-1, 2):
 			for y in range(-1, 2):
@@ -41,19 +51,31 @@ func build_walls() -> void:
 					set_cell(cell.x + x, cell.y + y, Tile.Wall)
 
 
+func _random_int(minimum: int, maximum: int) -> int:
+	return minimum + ((randi() % (maximum - minimum)) if maximum > minimum else 0)
+
+
 func _random_vector(minimum: Vector2, maximum: Vector2 = - Vector2.ONE) -> Vector2:
 	if maximum.x < 0 and maximum.y < 0:
 		maximum = minimum
 		minimum = Vector2.ZERO
-	var x := randi() % int((maximum.x - minimum.x) + minimum.x)
-	var y := randi() % int((maximum.y - minimum.y) + minimum.y)
+	if minimum == maximum:
+		return minimum
+	var x: int = minimum.x + (randi() % int(maximum.x - minimum.x)) if maximum.x > minimum.x else 0
+	var y: int = minimum.y + (randi() % int(maximum.y - minimum.y)) if maximum.y > minimum.y else 0
 	return Vector2(x, y)
 
 
-func _build_rect(rect: Rect2) -> void:
+func _check_rect(rect: Rect2) -> void:
 	for x in range(rect.position.x, rect.end.x):
 		for y in range(rect.position.y, rect.end.y):
-			set_cell(x, y, Tile.Floor)
+			assert(get_cell(x, y) == INVALID_CELL)
+
+
+func _build_rect(rect: Rect2, tile: int = Tile.Floor) -> void:
+	for x in range(rect.position.x, rect.end.x):
+		for y in range(rect.position.y, rect.end.y):
+			set_cell(x, y, tile)
 
 
 func generate() -> void:
@@ -68,77 +90,53 @@ func generate() -> void:
 		_build_rect(concourse)
 
 
-func generate_hub(min_size: Vector2 = Vector2(4, 4),
-				  max_size: Vector2 = Vector2(16, 16)) -> Rect2:
-	assert(min_size.x <= max_size.x and min_size.y <= max_size.y)
+func generate_hub(min_size: Vector2 = Vector2(16, 16),
+				  max_size: Vector2 = Vector2(20, 20)) -> Rect2:
+	assert(min_size <= max_size)
 	assert(int(min_size.x) % 2 == 0 and
 		   int(min_size.y) % 2 == 0 and
 		   int(max_size.x) % 2 == 0 and
 		   int(max_size.y) % 2 == 0)
-	var hub_size := _random_vector(min_size, max_size)
+	var hub_size := _random_vector(min_size / 2, max_size / 2) * 2
 	var hub_rect := Rect2(- hub_size / 2, hub_size)
 	return hub_rect
 
 
 func generate_terminals(hub_rect: Rect2,
-						min_size: Vector2 = Vector2(4, 4),
-						max_size: Vector2 = Vector2(16, 16)) -> Array:
-	var next_terminal_size := _random_vector(min_size, max_size)
-	# Randomly choose sides to build terminals on
-	var directions := [Vector2.UP, Vector2.RIGHT, Vector2.LEFT, Vector2.DOWN]
-	directions.shuffle()
-	for i in range(directions.size(), 1):
-		if randf() > hub_side_chance:
-			directions.remove(i)
-			
-	# Build at least one terminal on every chosen side of the hub
-	var terminal_rects := []
-	for direction in directions:
-		var num_term := 0
-		var start: Vector2
-		var end: Vector2
-		if direction.x == 0: # UP or DOWN
-			start.x = hub_rect.position.x
-			end.x = hub_rect.end.x - next_terminal_size.x
-			if direction.y < 0: # UP
-				start.y = hub_rect.position.y
-			else: # DOWN
-				start.y = hub_rect.end.y
-			end.y = start.y
-		else: # LEFT or RIGHT
-			start.y = hub_rect.position.y
-			end.y = hub_rect.end.y - next_terminal_size.x # Treating the terminal as rotated
-			if direction.x < 0: # LEFT
-				start.x = hub_rect.position.x
-			else: # RIGHT
-				start.x = hub_rect.end.x
-			end.x = start.x
-		var skip_x := 0
-		var skip_y := 0
-		for x in range(start.x, end.x):
-			if skip_x:
-				skip_x -= 1
-				continue
-			for y in range(start.y, end.y):
-				if skip_y:
-					skip_y -= 1
-					continue
-				if randf() > terminal_generation_chance:
-					var term_size: Vector2
-					term_size.x = next_terminal_size.x if direction.x == 0 \
-													   else next_terminal_size.y
-					term_size.y = next_terminal_size.y if direction.x == 0 \
-													   else next_terminal_size.x
-					next_terminal_size = _random_vector(min_size, max_size)
-					if direction in [Vector2.DOWN, Vector2.LEFT]:
-						term_size.y = - term_size.y
-					if direction in [Vector2.UP, Vector2.DOWN]:
-						skip_x = term_size.x
-					if direction in [Vector2.LEFT, Vector2.RIGHT]:
-						skip_y = term_size.y
-					var terminal_rect := Rect2(Vector2(x, y), term_size)
-					terminal_rects.append(terminal_rect)
-	return terminal_rects
+						min_width: int = 4,
+						min_length: int = 4,
+						max_width: int = 4,
+						max_length:int = 8) -> Array:
+	var start_x = hub_rect.position.x
+	var start_y = hub_rect.position.y
+	var end_x = hub_rect.end.x
+	var end_y = hub_rect.end.y
+	
+	var terminals := []
+
+	for y in [start_y, end_y]:
+		var possible_terminals := range(start_x + max_width / 2, end_x - max_width / 2 - 1)
+		possible_terminals.shuffle()
+		for x in possible_terminals:
+			var terminal_short := _random_int(min_width, max_width)
+			var terminal_long := _random_int(min_length, max_length)
+			for margin in range(x - terminal_short / 2 - terminal_spacing, x + terminal_short / 2 + terminal_spacing):
+				possible_terminals.erase(margin)
+			var terminal_rect := Rect2(x, end_y if y == end_y else (start_y - terminal_long), terminal_short, terminal_long)
+			_check_rect(terminal_rect)
+			terminals.append(terminal_rect)
+	for x in [start_x, end_x]:
+		var possible_terminals := range(start_y + max_width / 2, end_y - max_width / 2 - 1)
+		possible_terminals.shuffle()
+		for y in possible_terminals:
+			var terminal_short := _random_int(min_width, max_width)
+			var terminal_long := _random_int(min_length, max_length)
+			for margin in range(y - terminal_short / 2 - terminal_spacing, y + terminal_short / 2 + terminal_spacing):
+				possible_terminals.erase(margin)
+			var terminal_rect := Rect2(end_x if x == end_x else (start_x - terminal_long), y, terminal_long, terminal_short)
+			_check_rect(terminal_rect)
+			terminals.append(terminal_rect)
+	return terminals
 
 
 func generate_concourses(terminal_rects: Array) -> Array:
