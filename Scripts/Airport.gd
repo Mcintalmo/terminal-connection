@@ -3,13 +3,23 @@ extends TileMap
 const GATE_SCENE := preload("res://Scenes/Gate.tscn")
 const KIOSK_SCENE := preload("res://Scenes/Kiosk.tscn")
 
-export(float) var hub_side_chance := 0.5
+export(Vector2) var min_hub_size := Vector2(4, 4)
+export(Vector2) var max_hub_size := Vector2(16, 16)
+
 export(float) var terminal_generation_chance := 1
+export(Vector2) var min_terminal_size := Vector2(4, 4)
+export(Vector2) var max_terminal_size := Vector2(4, 16)
 export(float) var terminal_spacing := 4
+
 export(float) var concourse_generation_chance := 0.5
+export(Vector2) var min_concourse_size := Vector2(2, 2)
+export(Vector2) var max_concourse_size := Vector2(2, 8)
 export(float) var concourse_spacing := 2
+
 export(float) var gate_generation_chance := 0.5
-export(float) var gate_spacing := 1
+export(Vector2) var min_gate_size := Vector2(1, 2)
+export(Vector2) var max_gate_size := Vector2(1, 4)
+export(float) var gate_spacing := 2
 
 enum Tile {
 	Floor,
@@ -24,11 +34,15 @@ var gates := []
 func _ready() -> void:
 	randomize()
 	clear()
-	var hub_rect := generate_hub()
-	var term_rects := generate_terminals(hub_rect)
-	_build_rect(hub_rect)
-	for term in term_rects:
-		_build_rect(term, 1)
+	var hub_rect := generate_hub(min_hub_size, max_hub_size)
+	var term_rects := generate_satellites(hub_rect, min_terminal_size, max_terminal_size, terminal_spacing, 1)
+	var concourse_rects := []
+	for rect in term_rects:
+		concourse_rects.append_array(generate_satellites(rect, min_concourse_size, max_concourse_size, concourse_spacing, 2))
+	var gate_rects := []
+	for rect in concourse_rects:
+		gate_rects.append_array(generate_satellites(rect, min_gate_size, max_gate_size, gate_spacing, 3))
+	_build_walls()
 
 
 func get_num_gates() -> int:
@@ -44,7 +58,7 @@ func randomize_kiosks() -> void:
 
 
 func _build_walls() -> void:
-	for cell in get_used_cells_by_id(Tile.Floor):
+	for cell in get_used_cells():
 		for x in range(-1, 2):
 			for y in range(-1, 2):
 				if get_cell(cell.x + x, cell.y + y) == INVALID_CELL:
@@ -66,28 +80,18 @@ func _random_vector(minimum: Vector2, maximum: Vector2 = - Vector2.ONE) -> Vecto
 	return Vector2(x, y)
 
 
-func _check_rect(rect: Rect2) -> void:
+func _check_rect(rect: Rect2) -> bool:
 	for x in range(rect.position.x, rect.end.x):
 		for y in range(rect.position.y, rect.end.y):
-			assert(get_cell(x, y) == INVALID_CELL)
+			if get_cell(x, y) != INVALID_CELL:
+				return false
+	return true
 
 
 func _build_rect(rect: Rect2, tile: int = Tile.Floor) -> void:
 	for x in range(rect.position.x, rect.end.x):
 		for y in range(rect.position.y, rect.end.y):
 			set_cell(x, y, tile)
-
-
-func generate() -> void:
-	var hub_rect := generate_hub()
-	var terminal_rects := generate_terminals(hub_rect)
-	var concourse_rects := generate_concourses(terminal_rects)
-	var gate_rects := generate_gates(concourse_rects)
-	_build_rect(hub_rect)
-	for terminal in terminal_rects:
-		_build_rect(terminal)
-	for concourse in concourse_rects:
-		_build_rect(concourse)
 
 
 func generate_hub(min_size: Vector2 = Vector2(16, 16),
@@ -99,44 +103,50 @@ func generate_hub(min_size: Vector2 = Vector2(16, 16),
 		   int(max_size.y) % 2 == 0)
 	var hub_size := _random_vector(min_size / 2, max_size / 2) * 2
 	var hub_rect := Rect2(- hub_size / 2, hub_size)
+	if _check_rect(hub_rect):
+		_build_rect(hub_rect)
 	return hub_rect
 
 
-func generate_terminals(hub_rect: Rect2,
-						min_width: int = 4,
-						min_length: int = 4,
-						max_width: int = 4,
-						max_length:int = 8) -> Array:
-	var start_x = hub_rect.position.x
-	var start_y = hub_rect.position.y
-	var end_x = hub_rect.end.x
-	var end_y = hub_rect.end.y
+func generate_satellites(base_rect: Rect2,
+						min_size: Vector2,
+						max_size: Vector2,
+						spacing: int,
+						color: int = 0) -> Array:
+	var start_x = base_rect.position.x
+	var start_y = base_rect.position.y
+	var end_x = base_rect.end.x
+	var end_y = base_rect.end.y
 	
-	var terminals := []
+	var rects := []
 
 	for y in [start_y, end_y]:
-		var possible_terminals := range(start_x + max_width / 2, end_x - max_width / 2 - 1)
-		possible_terminals.shuffle()
-		for x in possible_terminals:
-			var terminal_short := _random_int(min_width, max_width)
-			var terminal_long := _random_int(min_length, max_length)
-			for margin in range(x - terminal_short / 2 - terminal_spacing, x + terminal_short / 2 + terminal_spacing):
-				possible_terminals.erase(margin)
-			var terminal_rect := Rect2(x, end_y if y == end_y else (start_y - terminal_long), terminal_short, terminal_long)
-			_check_rect(terminal_rect)
-			terminals.append(terminal_rect)
+		var possible := range(start_x + max_size.x / 2, end_x - max_size.x / 2 - 1)
+		possible.shuffle()
+		for x in possible:
+			var short := _random_int(min_size.x, max_size.x)
+			var long := _random_int(min_size.y, max_size.y)
+			var rect := Rect2(x, end_y if y == end_y else (start_y - long), short, long)
+			if !_check_rect(rect):
+				continue
+			_build_rect(rect, color)
+			rects.append(rect)
+			for margin in range(x - short / 2 - spacing, x + short / 2 + spacing):
+				possible.erase(margin)
 	for x in [start_x, end_x]:
-		var possible_terminals := range(start_y + max_width / 2, end_y - max_width / 2 - 1)
-		possible_terminals.shuffle()
-		for y in possible_terminals:
-			var terminal_short := _random_int(min_width, max_width)
-			var terminal_long := _random_int(min_length, max_length)
-			for margin in range(y - terminal_short / 2 - terminal_spacing, y + terminal_short / 2 + terminal_spacing):
-				possible_terminals.erase(margin)
-			var terminal_rect := Rect2(end_x if x == end_x else (start_x - terminal_long), y, terminal_long, terminal_short)
-			_check_rect(terminal_rect)
-			terminals.append(terminal_rect)
-	return terminals
+		var possible := range(start_y + max_size.x / 2, end_y - max_size.x / 2 - 1)
+		possible.shuffle()
+		for y in possible:
+			var short := _random_int(min_size.x, max_size.x)
+			var long := _random_int(min_size.y, max_size.y)
+			var rect := Rect2(end_x if x == end_x else (start_x - long), y, long, short)
+			if !_check_rect(rect):
+				continue
+			_build_rect(rect, color)
+			rects.append(rect)
+			for margin in range(y - short / 2 - spacing, y + short / 2 + spacing):
+				possible.erase(margin)
+	return rects
 
 
 func generate_concourses(terminal_rects: Array) -> Array:
