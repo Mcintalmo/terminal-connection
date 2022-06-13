@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/FlightInfo.gd" type="Script" id=1]
+
+[node name="FlightInfo" type="HBoxContainer"]
+margin_right = 14.0
+margin_bottom = 14.0
+custom_constants/separation = 16
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AirlineLabel" type="Label" parent="."]
+margin_top = 3.0
+margin_right = 42.0
+margin_bottom = 17.0
+text = "Airline"
+
+[node name="FlightNumberLabel" type="Label" parent="."]
+margin_left = 58.0
+margin_top = 3.0
+margin_right = 100.0
+margin_bottom = 17.0
+text = "Flt No."
+
+[node name="DestinationLabel" type="Label" parent="."]
+margin_left = 116.0
+margin_top = 3.0
+margin_right = 190.0
+margin_bottom = 17.0
+text = "Destination"
+
+[node name="GateLetterLabel" type="Label" parent="."]
+margin_left = 206.0
+margin_top = 3.0
+margin_right = 236.0
+margin_bottom = 17.0
+text = "Gate"
+
+[node name="GateNumberLabel" type="Label" parent="."]
+margin_left = 252.0
+margin_top = 3.0
+margin_right = 274.0
+margin_bottom = 17.0
+text = "No."
+
+[node name="DepartureTimeLabel" type="Label" parent="."]
+margin_left = 290.0
+margin_top = 3.0
+margin_right = 322.0
+margin_bottom = 17.0
+text = "Time"
+
+[node name="RemarksLabel" type="Label" parent="."]
+margin_left = 338.0
+margin_top = 3.0
+margin_right = 393.0
+margin_bottom = 17.0
+text = "Remarks"
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 409.0
+margin_right = 445.0
+margin_bottom = 20.0
+text = "Buy"
+
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]
