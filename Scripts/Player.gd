@@ -20,6 +20,7 @@ func _physics_process(delta):
 	if Input.get_action_strength("right"):
 		_direction += Vector2.RIGHT
 	_direction = _direction.normalized()
+	_direction.y *= 0.5
 # warning-ignore:return_value_discarded
 	move_and_slide(_direction * speed)
 

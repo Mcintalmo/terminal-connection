@@ -3,12 +3,14 @@ extends HBoxContainer
 export(String) var airline := "Gamma" setget set_airline
 export(int) var flight_number := -1 setget set_flight_number
 export(String) var destination := "Nowhere" setget set_destination
-export(String) var concourse := "A" setget set_concourse
+export(int) var concourse := 1 setget set_concourse
 export(int) var gate_number := 1 setget set_gate_number
 export(int) var departure_time := 0 setget set_departure_time
 export(String) var remarks := "On Time" setget set_remarks
 
 var owned: bool = false
+
+const LETTERS := ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"]
 
 signal sell_attempted
 signal buy_attempted
@@ -31,7 +33,7 @@ func set_airline(value: String) -> void:
 
 func set_flight_number(value: int) -> void:
 	flight_number = value
-	$FlightNumberLabel.text = flight_number
+	$FlightNumberLabel.text = str(flight_number)
 
 
 func set_destination(value: String) -> void:
@@ -39,19 +41,19 @@ func set_destination(value: String) -> void:
 	$DestinationLabel.text = destination
 
 
-func set_concourse(value: String) -> void:
+func set_concourse(value: int) -> void:
 	concourse = value
-	$GateLetterLabel.text = concourse
+	$GateLetterLabel.text = LETTERS[concourse]
 
 
 func set_gate_number(value: int) -> void:
 	gate_number = value
-	$GateNumberLabel.text = gate_number
+	$GateNumberLabel.text = str(gate_number)
 
 
 func set_departure_time(value: int) -> void:
 	departure_time = value
-	$DepartureTimeLabel.text = departure_time
+	$DepartureTimeLabel.text = str(departure_time)
 
 
 func set_remarks(value: String) -> void:

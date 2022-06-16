@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+   inkscape:export-xdpi="15.36"
+   inkscape:export-ydpi="15.36"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="iso_blocks.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="4.6039282"
+     inkscape:cx="71.460715"
+     inkscape:cy="64.401526"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path6308"
+       style="fill:#e6e6e6;stroke-width:0.132292"
+       d="m 8.466667,19.050001 v 4.233334 l -4.2333333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.147907"
+       id="rect1326"
+       width="4.7330108"
+       height="4.7330108"
+       x="2.3665054"
+       y="-2.3665054"
+       transform="matrix(0.8944272,0.44721359,-0.8944272,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#000000;stroke-width:0.147907"
+       id="rect1580"
+       width="4.7330108"
+       height="4.7330108"
+       x="7.0995159"
+       y="-7.0995164"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.147907"
+       id="rect1582"
+       width="4.7330108"
+       height="4.7330108"
+       x="11.832527"
+       y="-11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#666666;stroke-width:0.147907"
+       id="rect1584"
+       width="4.7330108"
+       height="4.7330108"
+       x="16.565538"
+       y="-16.565538"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff0000;stroke-width:0.147907"
+       id="rect1586"
+       width="4.7330108"
+       height="4.7330108"
+       x="7.0995159"
+       y="2.3665054"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff7e00;stroke-width:0.147907;fill-opacity:1"
+       id="rect1588"
+       width="4.7330108"
+       height="4.7330108"
+       x="11.832527"
+       y="-2.3665056"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ffff00;stroke-width:0.147907;fill-opacity:1"
+       id="rect1590"
+       width="4.7330108"
+       height="4.7330108"
+       x="16.565538"
+       y="-7.0995164"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#00ff00;stroke-width:0.147907;fill-opacity:1"
+       id="rect1592"
+       width="4.7330108"
+       height="4.7330108"
+       x="21.29855"
+       y="-11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#00f5ff;stroke-width:0.147907;fill-opacity:1"
+       id="rect2530"
+       width="4.7330108"
+       height="4.7330108"
+       x="11.832527"
+       y="7.0995159"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.147907;fill-opacity:1"
+       id="rect2532"
+       width="4.7330108"
+       height="4.7330108"
+       x="16.565538"
+       y="2.3665051"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#7e00ff;stroke-width:0.147907;fill-opacity:1"
+       id="rect2534"
+       width="4.7330108"
+       height="4.7330108"
+       x="21.29855"
+       y="-2.3665056"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.147907"
+       id="rect2536"
+       width="4.7330108"
+       height="4.7330108"
+       x="26.031561"
+       y="-7.0995164"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff01ff;stroke-width:0.147907;fill-opacity:1"
+       id="rect2538"
+       width="4.7330108"
+       height="4.7330108"
+       x="26.031561"
+       y="-7.0995164"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="rect5818"
+       style="fill:#f2f2f2;stroke-width:0.132292"
+       d="m 4.0369548e-7,19.050001 v 4.233334 L 4.2333336,25.400001 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.147907"
+       id="rect5816"
+       width="4.7330108"
+       height="4.7330108"
+       x="21.298552"
+       y="16.565538"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6490"
+       style="fill:#7d0000;fill-opacity:1;stroke-width:0.132292"
+       d="m 16.933335,19.050001 v 4.233334 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6492"
+       style="fill:#b60000;fill-opacity:1;stroke-width:0.132292"
+       d="m 8.4666683,19.050001 v 4.233334 l 4.2333337,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.147907"
+       id="rect6494"
+       width="4.7330108"
+       height="4.7330108"
+       x="26.031561"
+       y="11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6496"
+       style="fill:#007800;fill-opacity:1;stroke-width:0.132292"
+       d="m 25.400002,19.050001 v 4.233334 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6498"
+       style="fill:#00c100;fill-opacity:1;stroke-width:0.132292"
+       d="m 16.933336,19.050001 v 4.233334 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#00ff00;stroke-width:0.147907"
+       id="rect6500"
+       width="4.7330108"
+       height="4.7330108"
+       x="30.764574"
+       y="7.0995178"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6502"
+       style="fill:#00004b;fill-opacity:1;stroke-width:0.132292"
+       d="m 33.866669,19.050001 v 4.233334 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path6504"
+       style="fill:#000093;fill-opacity:1;stroke-width:0.132292"
+       d="m 25.400003,19.050001 v 4.233334 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.147907"
+       id="rect6506"
+       width="4.7330108"
+       height="4.7330108"
+       x="35.497581"
+       y="2.3665066"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.129419"
+       id="rect6508"
+       width="4.1413841"
+       height="4.1413841"
+       x="2.6623185"
+       y="-2.0706921"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#333333;stroke-width:0.129419"
+       id="rect6564"
+       width="4.1413841"
+       height="4.1413841"
+       x="7.395329"
+       y="-6.8037028"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11113"
+       style="fill:#e6e6e6;stroke-width:0.132292"
+       d="M 8.4666657,27.516666 V 31.75 l -4.2333333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11115"
+       style="fill:#f2f2f2;stroke-width:0.132292"
+       d="M -9.1630452e-7,27.516666 V 31.75 L 4.2333324,33.866666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.147907"
+       id="rect11117"
+       width="4.7330108"
+       height="4.7330108"
+       x="30.76457"
+       y="26.031561"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11119"
+       style="fill:#7d0000;fill-opacity:1;stroke-width:0.132292"
+       d="M 16.933334,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11121"
+       style="fill:#b60000;fill-opacity:1;stroke-width:0.132292"
+       d="M 8.466667,27.516666 V 31.75 l 4.233334,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.147907"
+       id="rect11123"
+       width="4.7330108"
+       height="4.7330108"
+       x="35.497578"
+       y="21.298548"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11125"
+       style="fill:#007800;fill-opacity:1;stroke-width:0.132292"
+       d="M 25.400001,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11127"
+       style="fill:#00c100;fill-opacity:1;stroke-width:0.132292"
+       d="M 16.933335,27.516666 V 31.75 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#00ff00;stroke-width:0.147907"
+       id="rect11129"
+       width="4.7330108"
+       height="4.7330108"
+       x="40.230587"
+       y="16.565538"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11131"
+       style="fill:#00004b;fill-opacity:1;stroke-width:0.132292"
+       d="M 33.866668,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11133"
+       style="fill:#000093;fill-opacity:1;stroke-width:0.132292"
+       d="M 25.400002,27.516666 V 31.75 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.147907"
+       id="rect11135"
+       width="4.7330108"
+       height="4.7330108"
+       x="44.9636"
+       y="11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11137"
+       style="fill:#e6e6e6;stroke-width:0.132292"
+       d="M 8.4666657,27.516666 V 31.75 l -4.2333333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11139"
+       style="fill:#f2f2f2;stroke-width:0.132292"
+       d="M -9.1630452e-7,27.516666 V 31.75 L 4.2333324,33.866666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.147907"
+       id="rect11141"
+       width="4.7330108"
+       height="4.7330108"
+       x="30.76457"
+       y="26.031561"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11143"
+       style="fill:#7d0000;fill-opacity:1;stroke-width:0.132292"
+       d="M 16.933334,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11145"
+       style="fill:#b60000;fill-opacity:1;stroke-width:0.132292"
+       d="M 8.466667,27.516666 V 31.75 l 4.233334,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.147907"
+       id="rect11147"
+       width="4.7330108"
+       height="4.7330108"
+       x="35.497578"
+       y="21.298548"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11149"
+       style="fill:#007800;fill-opacity:1;stroke-width:0.132292"
+       d="M 25.400001,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11151"
+       style="fill:#00c100;fill-opacity:1;stroke-width:0.132292"
+       d="M 16.933335,27.516666 V 31.75 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#00ff00;stroke-width:0.147907"
+       id="rect11153"
+       width="4.7330108"
+       height="4.7330108"
+       x="40.230587"
+       y="16.565538"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11155"
+       style="fill:#00004b;fill-opacity:1;stroke-width:0.132292"
+       d="M 33.866668,27.516666 V 31.75 l -4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <path
+       id="path11157"
+       style="fill:#000093;fill-opacity:1;stroke-width:0.132292"
+       d="M 25.400002,27.516666 V 31.75 l 4.233333,2.116666 v -6.35 z"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.147907"
+       id="rect11159"
+       width="4.7330108"
+       height="4.7330108"
+       x="44.9636"
+       y="11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.147907"
+       id="rect11161"
+       width="4.7330108"
+       height="4.7330108"
+       x="16.565538"
+       y="11.832527"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.147907"
+       id="rect11163"
+       width="4.7330108"
+       height="4.7330108"
+       x="21.29855"
+       y="7.0995164"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ff7eff;fill-opacity:1;stroke-width:0.147907"
+       id="rect11165"
+       width="4.7330108"
+       height="4.7330108"
+       x="26.031561"
+       y="2.3665056"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.147907"
+       id="rect11167"
+       width="4.7330108"
+       height="4.7330108"
+       x="30.764572"
+       y="-2.3665051"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+    <rect
+       style="fill:#000080;fill-opacity:1;stroke-width:0.147907"
+       id="rect11169"
+       width="4.7330108"
+       height="4.7330108"
+       x="30.764572"
+       y="-2.3665051"
+       transform="matrix(0.89442719,0.44721359,-0.89442719,0.44721359,0,0)"
+       inkscape:export-filename="C:\Users\mcint\Documents\TerminalConnection\Assets\iso_tiles.png"
+       inkscape:export-xdpi="95.999992"
+       inkscape:export-ydpi="95.999992" />
+  </g>
+</svg>

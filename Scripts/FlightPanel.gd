@@ -13,6 +13,12 @@ enum View {
 
 var view: int = View.All
 
+func clear() -> void:
+	for flight in flight_infos.get_children():
+		if flight != header:
+			flight.queue_free()
+			flight_infos.remove_child(flight)
+
 func add_flight(flight: Flight) -> void:
 	var flight_info := header.duplicate()
 	flight_infos.add_child(flight_info)

@@ -4,7 +4,6 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 14.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -13,9 +12,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.46875, 0.46875 )
+position = Vector2( 0, -32 )
 texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -65 )
 current = true
-zoom = Vector2( 10, 10 )

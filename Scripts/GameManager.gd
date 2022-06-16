@@ -24,9 +24,8 @@ var flights := []
 var max_tickets := 3
 
 
-onready var player := $Player
-onready var kiosks := $Kiosks
-onready var gates := $Gates
+onready var player := $Airport/Player
+onready var airport := $Airport
 onready var flight_panel := $UI/FlightPanel
 
 func _ready():
@@ -34,24 +33,15 @@ func _ready():
 	randomize()
 	
 	var gate_id := 0
-	for gate in gates.get_children():
-		gate.id = gate_id
-		gate_id += 1
+	for gate in airport.gates:
 		gate.connect("legally_entered", self, "takeoff", [gate_id])
+		var airline := "Line"
+		
+		flights.append(Flight.new(gate_id, airline, gate.terminal, gate.concourse, gate.number, "", 0, ""))
+		gate_id += 1
 	
-	for kiosk in kiosks.get_children():
+	for kiosk in airport.kiosks:
 		kiosk.connect("exited", self, "_on_kiosk_exited")
-
-
-func generate_flight(num_flights: int = 100) -> void:
-	for i in range(num_flights):
-		var number := i
-		var airline: int = randi() % Airline.Count
-		var airline_str: String = Airline.keys()[airline]
-		var concourse: String = Concourse.keys()[randi() % Concourse.Count]
-		var gate_number: int = randi() % 10
-		var departure_time: int = randi() % 30000
-		var flight := Flight.new(number, ariline_str, concourse, gate_number, deaptu)
 
 
 func takeoff(_gate_id: int) -> void:
@@ -68,6 +58,9 @@ func _on_Player_interacted():
 	if flight_panel.is_visible():
 		flight_panel.hide()
 	else:
+		flight_panel.clear()
+		for flight in flights:
+			flight_panel.add_flight(flight)
 		flight_panel.show()
 
 
